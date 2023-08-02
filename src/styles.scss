@@ -1,4 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import '@angular/material/theming';
+
+@include mat-core();
+
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+$spacing-unit: 4px;
+
+@mixin m($x) {
+  margin: $spacing-unit * $x;
+}
+
+.small-m {
+  @include m(1);
+}
+
+.medium-m {
+  @include m(2);
+}
+
+.large-m {
+  @include m(3);
+}
+
+$themed: mat-light-theme((
+  color: (
+    primary: mat-palette($mat-indigo),
+    accent: mat-palette($mat-pink),
+    warn: mat-palette($mat-red)
+  ),
+  typography: mat-typography-config()
+));
+
+.active {
+  color: mat-color(map-get($themed, primary));
+}

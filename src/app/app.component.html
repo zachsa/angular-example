@@ -1,6 +1,8 @@
-<mat-toolbar color="primary">
-  <mat-icon>menu</mat-icon>
-  <span>Application header</span>
-</mat-toolbar>
-<router-outlet></router-outlet>
-<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+<app-header></app-header>
+
+<main [@routeAnimations]="o.isActivated ? o.activatedRoute : ''" class="main medium-m">
+  <router-outlet #o="outlet"></router-outlet>
+</main>
+
+<app-footer></app-footer>
+

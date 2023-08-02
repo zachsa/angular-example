@@ -1,0 +1,11 @@
+<mat-toolbar class="sarao-toolbar" color="primary">
+  <button [matMenuTriggerFor]="menu" mat-icon-button>
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button routerLinkActive="active" mat-menu-item [routerLink]="['/']" [routerLinkActiveOptions]="{exact: true}">Home</button>
+    <button routerLinkActive="active" mat-menu-item [routerLink]="['/map']">Map</button>
+  </mat-menu>
+  
+  <p>Angular application</p>
+</mat-toolbar>
