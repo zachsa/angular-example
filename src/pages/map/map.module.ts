@@ -6,12 +6,8 @@ import { MapComponent } from './map.component';
 
 
 @NgModule({
-  declarations: [
-    MapComponent
-  ],
-  imports: [
-    CommonModule,
-    MapRoutingModule
-  ]
+  declarations: [MapComponent],
+  imports: [CommonModule, MapRoutingModule],
+  providers: [],
 })
-export class MapModule { }
+export class MapModule {}

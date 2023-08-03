@@ -1,3 +1,14 @@
+@import "src/styles.scss";
+
+.toolbar_ {
+  @include pl(0);
+}
+
 p {
   margin: 0;
+}
+
+.menu-trigger {
+  @include ml(1);
+  @include mr(1);
 }

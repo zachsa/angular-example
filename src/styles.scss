@@ -10,20 +10,56 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 $spacing-unit: 4px;
 
-@mixin m($x) {
-  margin: $spacing-unit * $x;
-}
+@mixin ml($x) { margin-left: $spacing-unit * $x; }
+@mixin mr($x) { margin-right: $spacing-unit * $x; }
+@mixin mb($x) { margin-bottom: $spacing-unit * $x; }
+@mixin mt($x) { margin-top: $spacing-unit * $x; }
 
 .small-m {
-  @include m(1);
+  @include ml(1);
+  @include mr(1);
+  @include mb(1);
+  @include mt(1);
 }
 
 .medium-m {
-  @include m(2);
+  @include ml(2);
+  @include mr(2);
+  @include mb(2);
+  @include mt(2);
 }
 
 .large-m {
-  @include m(3);
+  @include ml(3);
+  @include mr(3);
+  @include mb(3);
+  @include mt(3);
+}
+
+@mixin pl($x) { padding-left: $spacing-unit * $x; }
+@mixin pr($x) { padding-right: $spacing-unit * $x; }
+@mixin pb($x) { padding-bottom: $spacing-unit * $x; }
+@mixin pt($x) { padding-top: $spacing-unit * $x; }
+
+.small-p {
+  @include pl(1);
+  @include pr(1);
+  @include pb(1);
+  @include pt(1);
+}
+
+.medium-p {
+  @include pl(2);
+  @include pr(2);
+  @include pb(2);
+  @include pt(2);
+}
+
+.large-p {
+  @include pl(3);
+  @include pr(3);
+  @include pb(3);
+  @include pt(3);
 }
 
 $themed: mat-light-theme((
@@ -37,4 +73,8 @@ $themed: mat-light-theme((
 
 .active {
   color: mat-color(map-get($themed, primary));
+}
+
+.debug {
+  border: 1px solid blue;
 }

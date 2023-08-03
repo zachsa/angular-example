@@ -1,11 +1,22 @@
-<mat-toolbar class="sarao-toolbar" color="primary">
-  <button [matMenuTriggerFor]="menu" mat-icon-button>
+<mat-toolbar class="toolbar_" color="primary">
+  <button [matMenuTriggerFor]="menu" mat-icon-button class="menu-trigger">
     <mat-icon>menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <button routerLinkActive="active" mat-menu-item [routerLink]="['/']" [routerLinkActiveOptions]="{exact: true}">Home</button>
-    <button routerLinkActive="active" mat-menu-item [routerLink]="['/map']">Map</button>
+    <button
+      routerLinkActive="active"
+      mat-menu-item
+      [routerLink]="['/']"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
+    </button>
+    <button routerLinkActive="active" mat-menu-item [routerLink]="['/map']">
+      <mat-icon>map</mat-icon>
+      <span>Map</span>
+    </button>
   </mat-menu>
-  
+
   <p>Angular application</p>
 </mat-toolbar>

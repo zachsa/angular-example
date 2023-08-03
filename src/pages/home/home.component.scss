@@ -1,0 +1,18 @@
+.file-tree-invisible {
+  display: none;
+}
+
+.file-tree ul,
+.file-tree li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.file-tree .mat-nested-tree-node div[role=group] {
+  padding-left: 40px;
+}
+
+.file-tree div[role=group] > .mat-tree-node {
+  padding-left: 40px;
+}
