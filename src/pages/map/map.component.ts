@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core'
-import maplibregl from 'maplibre-gl'
+import { Map } from 'maplibre-gl'
 
 @Component({
   selector: 'app-map',
@@ -7,11 +7,11 @@ import maplibregl from 'maplibre-gl'
   styleUrls: ['./map.component.scss'],
 })
 export class MapComponent implements AfterViewInit {
-  map!: maplibregl.Map
+  map!: Map
   @ViewChild('mapdiv') mapElement!: ElementRef
 
   ngAfterViewInit(): void {
-    this.map = new maplibregl.Map({
+    this.map = new Map({
       container: this.mapElement.nativeElement,
       style:
         'https://api.maptiler.com/maps/dataviz/style.json?key=n44RDSXf1ScLYVJ2fsV6',
